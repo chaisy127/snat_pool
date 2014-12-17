@@ -15,7 +15,7 @@ libipt_pool.so: libipt_pool.c
 	ld -shared -o libipt_pool.so libipt_pool.o
 
 clean:
-	-rm -f *.o *.so *.ko .*.cmd *.mod.c *.symvers *.order
+	-rm -fr *.o *.so *.ko .*.cmd *.mod.c *.symvers *.order .tmp_versions
 
 install: all
 	cp -rf libipt_pool.so /usr/local/lib/xtables/
